@@ -178,50 +178,18 @@ const sidequests = [
   },
 ];
 
-const FloatingShape = ({ className, delay = 0 }: { className: string; delay?: number }) => (
-  <div 
-    className={`absolute rounded-full opacity-20 blur-xl animate-float ${className}`}
-    style={{ animationDelay: `${delay}s` }}
-  />
-);
-
 const Sidequests = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Fun animated background */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {/* Gradient orbs */}
-        <FloatingShape className="w-96 h-96 bg-primary -top-20 -left-20" delay={0} />
-        <FloatingShape className="w-80 h-80 bg-pink-500 top-1/4 -right-20" delay={1} />
-        <FloatingShape className="w-64 h-64 bg-orange-400 top-1/2 left-1/4" delay={2} />
-        <FloatingShape className="w-72 h-72 bg-purple-500 bottom-1/4 right-1/4" delay={1.5} />
-        <FloatingShape className="w-56 h-56 bg-cyan-400 bottom-20 -left-10" delay={0.5} />
-        <FloatingShape className="w-48 h-48 bg-yellow-400 top-3/4 right-10" delay={2.5} />
+      {/* Grid pattern background like hero */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute inset-0 grid-pattern opacity-20" />
         
-        {/* Animated stars/sparkles */}
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-primary rounded-full animate-twinkle"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
-        
-        {/* Grid overlay */}
+        {/* Subtle gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
         <div 
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px',
-          }}
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl animate-pulse-glow" 
+          style={{ animationDelay: '1.5s' }}
         />
       </div>
 
@@ -334,7 +302,7 @@ const Sidequests = () => {
             className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
           >
             <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
-            <span className="font-mono text-sm">you scrolled all that? impressive dedication 👏</span>
+            <span className="font-mono text-sm">↑ scroll up to see the growth over the years</span>
           </button>
         </div>
       </div>
