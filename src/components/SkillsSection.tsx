@@ -1,8 +1,7 @@
 const skills = {
   'languages': ['Java', 'Python', 'Kotlin', 'React', 'SQL', 'PowerShell'],
-  'systems': ['Mac OS X', 'Windows'],
   'applications': ['Figma', 'Git', 'GitHub', 'Microsoft Office', 'Power BI', 'Power Automate', 'Canva', 'ServiceNow'],
-  'soft skills': ['Leadership', 'Presentation', 'Team Management', 'Client Communication', 'Mentorship', 'Problem Solving'],
+  'other skills': ['Leadership', 'Presentation', 'Team Management', 'Client Communication', 'Problem Solving', 'Windows Troubleshooting'],
 };
 
 const SkillsSection = () => {
