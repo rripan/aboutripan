@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2 text-primary">
             <Terminal className="w-5 h-5" />
-            <span className="font-mono font-semibold text-sm">Learn about Ripan</span>
+            <span className="font-mono font-semibold text-sm">.</span>
           </a>
 
           {/* Desktop Navigation */}
