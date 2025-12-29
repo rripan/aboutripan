@@ -1,21 +1,25 @@
-import { Folder } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Folder, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+    id: 'portfolio-website',
     title: 'Personal Portfolio Website',
-    description: 'Developed a full-stack personal portfolio website using React for the frontend and Flask for the backend. Integrated Google Gemini API to enhance functionality improving interactivity and user engagement.',
+    summary: 'Full-stack portfolio with AI-powered chatbot using React, Flask, and Google Gemini API.',
     tech: ['React', 'Flask', 'Google Gemini API'],
     period: 'May 2025',
   },
   {
+    id: 'ticket-resale',
     title: 'Ticket Resale Platform',
-    description: 'Initiated the development of a customer-to-customer (C2C) ticket marketplace, collaborating on backend systems using Django and designing the SQL database for secure data handling.',
+    summary: 'C2C ticket marketplace with Django backend and secure SQL database design.',
     tech: ['Django', 'SQL', 'Python'],
     period: 'Sept 2024',
   },
   {
+    id: 'ready-prototype',
     title: '"Ready" Prototype - Paws Hackathon',
-    description: 'Developed a study app prototype within 24 hours to address test anxiety, exam preparation, and time management, integrating research on study habits and behavioral patterns among individuals aged 18 to 23.',
+    summary: 'Study app prototype addressing test anxiety and time management for college students.',
     tech: ['Prototype', 'UX Research', 'Hackathon'],
     period: 'March 2024',
   },
@@ -30,10 +34,10 @@ const ProjectsSection = () => {
           projects
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <div
-              key={project.title}
+              key={project.id}
               className="opacity-0 animate-fade-in-up"
               style={{ animationDelay: `${idx * 0.1}s` }}
             >
@@ -47,19 +51,24 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
                 <p className="text-muted-foreground text-sm flex-grow mb-4">
-                  {project.description}
+                  {project.summary}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-mono text-muted-foreground"
-                    >
+                    <span key={tech} className="text-xs font-mono text-muted-foreground">
                       {tech}
                     </span>
                   ))}
                 </div>
+
+                <Link
+                  to={`/projects#${project.id}`}
+                  className="inline-flex items-center gap-1 text-xs font-mono text-primary hover:text-primary/80 transition-colors group"
+                >
+                  View details
+                  <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
               </div>
             </div>
           ))}
