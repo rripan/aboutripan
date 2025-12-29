@@ -82,8 +82,8 @@ const HeroSection = () => {
 
         {/* Scroll Indicator */}
         <div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in"
-          style={{ animationDelay: "0.8s" }}
+          className="opacity-0 animate-fade-in mt-10"
+          style={{ animationDelay: "0.7s" }}
         >
           <a
             href="#about"
