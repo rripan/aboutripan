@@ -259,8 +259,8 @@ const Sidequests = () => {
               return (
                 <div
                   key={quest.id}
-                  className="opacity-0 animate-fade-in-up relative"
-                  style={{ animationDelay: `${idx * 0.1}s` }}
+                  className={`opacity-0 relative ${idx % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'}`}
+                  style={{ animationDelay: `${idx * 0.15}s` }}
                 >
                   <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12' : 'md:ml-auto md:pl-12'}`}>
                     {/* Timeline dot with glow */}
