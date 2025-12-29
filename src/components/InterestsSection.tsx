@@ -4,12 +4,12 @@ const interests = [
   {
     icon: Dribbble,
     name: 'Soccer',
-    description: 'Love the beautiful game, both playing and watching.',
+    description: 'Love playing and watching. FC Barcelona fan.',
   },
   {
     icon: Palette,
     name: 'Design',
-    description: 'Passionate about creating visually appealing experiences.',
+    description: 'Prototyping in Figma, visuals on Canva, graphics with JS libraries.',
   },
   {
     icon: Trophy,
@@ -19,7 +19,7 @@ const interests = [
   {
     icon: Timer,
     name: 'Running',
-    description: 'Staying active and pushing personal limits.',
+    description: "Boston Half '24 & '25 finisher. Full marathon someday.",
   },
 ];
 
