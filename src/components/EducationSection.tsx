@@ -52,7 +52,7 @@ const EducationSection = () => {
               </p>
               <div className="flex items-center gap-2">
                 <Award className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">GPA: <span className="text-foreground font-mono">3.6</span></span>
+                <span className="text-muted-foreground">GPA: <span className="text-foreground font-mono">3.5</span></span>
               </div>
             </div>
 
