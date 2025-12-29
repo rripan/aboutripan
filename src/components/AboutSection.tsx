@@ -57,6 +57,7 @@ const AboutSection = () => {
 {`{
   "name": "Ripan",
   "role": "Full Stack Developer",
+  "location": "Boston, MA",
   "email": "kaur.ri@northeastern.edu",
   "interests": [
     "Human-Centered Design",

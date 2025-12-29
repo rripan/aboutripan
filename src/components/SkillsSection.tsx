@@ -1,8 +1,7 @@
 const skills = {
-  languages: ['TypeScript', 'JavaScript', 'Python', 'Rust', 'Go'],
-  frontend: ['React', 'Next.js', 'Vue', 'Tailwind CSS', 'Framer Motion'],
-  backend: ['Node.js', 'Express', 'PostgreSQL', 'Redis', 'GraphQL'],
-  tools: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma'],
+  'languages': ['Java', 'Python', 'Kotlin', 'React', 'SQL', 'Powershell'],
+  'systems': ['Mac OS X', 'Windows'],
+  'applications': ['Figma', 'Git', 'GitHub', 'Microsoft Office', 'Power Tools'],
 };
 
 const SkillsSection = () => {
@@ -14,7 +13,7 @@ const SkillsSection = () => {
           skills
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, items], idx) => (
             <div
               key={category}
