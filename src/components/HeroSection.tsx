@@ -50,7 +50,7 @@ const HeroSection = () => {
             <Github className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/ripandeep-kaur-003b341b0/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg bg-secondary border border-border hover:border-primary/50 hover:bg-secondary/80 transition-all duration-200 group"
