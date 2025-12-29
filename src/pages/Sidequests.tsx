@@ -1,54 +1,180 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Sparkles, Gamepad2, Music, Camera, Palette, Code, Coffee } from 'lucide-react';
+import { ArrowLeft, Sparkles, Trophy, Plane, Goal, Lightbulb, Instagram, Users, Timer, Shield, BookOpen, Mic, Globe, MessageCircle, Medal, Snowflake, UserCheck } from 'lucide-react';
 
 const sidequests = [
   {
-    id: 'sidequest-1',
-    title: 'Learning Guitar',
-    category: 'Music',
-    period: 'Ongoing',
-    description: 'Teaching myself acoustic guitar through YouTube tutorials and late-night practice sessions. Currently working on fingerpicking patterns.',
-    icon: Music,
+    id: 'sq-01',
+    title: 'YOHO — Carpool for Students',
+    subtitle: '🏆 1st Place — Girls In Tech Code/No-Code Hack 2022',
+    period: 'May 2022',
+    description: 'Built YOHO, a carpooling app for children to ensure safety, reduce CO₂ emissions, and create job opportunities for women drivers. Prototype designed in Figma and pitched successfully.',
+    skills: ['UI/UX Design', 'Pitching'],
+    icon: Trophy,
+    link: 'https://devpost.com/software/the-yoho-app-carpool-for-students',
   },
   {
-    id: 'sidequest-2',
-    title: 'Photography Adventures',
-    category: 'Creative',
+    id: 'sq-02',
+    title: 'Solo-ish Australia Trip',
+    subtitle: 'A Pre-College Reset',
+    period: 'April 2023',
+    description: 'Traveled across Australia, hopping city to city while staying with family. Gained independence and confidence, marking a personal growth moment before college.',
+    skills: ['Independence', 'Adaptability'],
+    icon: Plane,
+    link: 'https://vsco.co/rripan/gallery',
+  },
+  {
+    id: 'sq-03',
+    title: 'Football Pilgrimage — Study Abroad',
+    subtitle: 'London, UK',
+    period: 'Fall 2023',
+    description: 'Attended five football matches at iconic stadiums while studying abroad in London. Traveled to Manchester for Man City vs Tottenham, sitting in the away section. Visited Etihad, London Stadium, Stamford Bridge, Emirates, White Hart Lane.',
+    skills: ['Cultural Immersion', 'Solo Travel'],
+    icon: Goal,
+  },
+  {
+    id: 'sq-04',
+    title: 'Buildspace Cohort',
+    subtitle: 'App Prototyping & Exploration',
+    period: 'May – June 2024',
+    description: 'Participated in a Buildspace cohort under Farza Ahmed. Prototyped two app ideas — a family-tree app (paused for privacy) and Gadabout, a travel journaling app. Focused on user feedback and iteration.',
+    skills: ['Product Thinking', 'Rapid Prototyping'],
+    icon: Lightbulb,
+    link: 'https://www.figma.com/board/pfrtu3xLnDU4rC15PsM2pn/Gadabout',
+  },
+  {
+    id: 'sq-05',
+    title: 'Green Decor Internship',
+    subtitle: 'Instagram & Graphics',
     period: 'Summer 2024',
-    description: 'Exploring street photography around Boston. Building a portfolio of urban landscapes and candid moments.',
-    icon: Camera,
+    description: "Built Green Decor's Instagram presence, created graphics on Canva, and worked to increase engagement.",
+    skills: ['Social Media Marketing', 'Content Creation'],
+    icon: Instagram,
+    links: [
+      { label: 'Instagram', url: 'https://www.instagram.com/greendecorhandicrafts/' },
+      { label: 'Website', url: 'https://www.greendecor.co.in' },
+    ],
   },
   {
-    id: 'sidequest-3',
-    title: 'Game Development',
-    category: 'Tech',
+    id: 'sq-06',
+    title: '7-a-side Intramural Football',
+    subtitle: 'Fall 2024 Season',
     period: 'Fall 2024',
-    description: 'Building a small indie game using Unity. Learning C# and game design principles along the way.',
-    icon: Gamepad2,
+    description: 'Participated in 7-a-side football intramurals, lost after 3 games.',
+    skills: ['Teamwork', 'Sportsmanship'],
+    icon: Users,
   },
   {
-    id: 'sidequest-4',
-    title: 'Digital Art Journey',
-    category: 'Creative',
-    period: 'Spring 2024',
-    description: 'Picked up digital illustration on my iPad. Experimenting with character design and concept art.',
-    icon: Palette,
+    id: 'sq-07',
+    title: 'Boston Half Marathon',
+    subtitle: 'First Attempt',
+    period: 'November 2024',
+    description: 'Ran the Boston Half Marathon with almost no training. Finished in 2:36:00, proud to complete the race.',
+    skills: ['Mental Toughness', 'Endurance'],
+    icon: Timer,
   },
   {
-    id: 'sidequest-5',
-    title: 'Open Source Contributions',
-    category: 'Tech',
-    period: 'Ongoing',
-    description: 'Contributing to open source projects on GitHub. Learning from the community and giving back.',
-    icon: Code,
+    id: 'sq-08',
+    title: 'Physical Security Challenge',
+    subtitle: 'Cybersecurity Class Extra Credit',
+    period: 'December 2024',
+    description: "Attempted a physical security extra credit challenge, gained access to the professor's office via a TA. Scored 0.01%, but it was a fun hands-on learning experience.",
+    skills: ['Ethical Hacking', 'Creative Problem Solving'],
+    icon: Shield,
   },
   {
-    id: 'sidequest-6',
-    title: 'Coffee Brewing Experiments',
-    category: 'Hobby',
-    period: 'Ongoing',
-    description: 'Diving deep into specialty coffee. Exploring different brewing methods from pour-over to espresso.',
-    icon: Coffee,
+    id: 'sq-09',
+    title: 'Tutor — Knack',
+    subtitle: 'Boston, Massachusetts',
+    period: 'May 2024 – March 2025',
+    description: 'Part-time tutor for college courses: Database Design, Fundamentals of CS II, Discrete Structures, Introduction to Mathematical Reasoning. Provided one-on-one sessions (~6 hrs/week).',
+    skills: ['Teaching', 'Communication'],
+    icon: BookOpen,
+  },
+  {
+    id: 'sq-10',
+    title: 'Oasis Cohort',
+    subtitle: 'AI Mood Compliment Website',
+    period: 'Spring 2025',
+    description: 'Built a website that generated AI-powered compliments based on user mood and read them out loud in a chosen voice. Fun, interactive project focused on AI integration.',
+    skills: ['Web Development', 'AI Integration'],
+    icon: Sparkles,
+  },
+  {
+    id: 'sq-11',
+    title: 'Global Alumni Ambassador',
+    subtitle: 'Northeastern University',
+    period: 'February – May 2025',
+    description: 'Served as a Global Alumni Ambassador, sharing experiences with incoming students in the London study abroad program. Activities included tabling, panels, and one-on-one communication. Returning in Jan 2026 as a senior ambassador.',
+    skills: ['Public Speaking', 'Mentoring'],
+    icon: Mic,
+  },
+  {
+    id: 'sq-12',
+    title: '2-Hour Website Build',
+    subtitle: 'CPA FinTax',
+    period: 'April 2025',
+    description: 'Built a website in under 2 hours for a chartered accountancy firm using Google Sites (free). Fast, functional, delivered under constraints.',
+    skills: ['Shipping Under Pressure', 'Prioritization'],
+    icon: Globe,
+    link: 'https://cpafintax.ca',
+  },
+  {
+    id: 'sq-13',
+    title: 'Green Decor Internship',
+    subtitle: 'WhatsApp Domestic Sales',
+    period: 'Summer 2025',
+    description: 'Developed WhatsApp broadcast drops workflow for domestic sales, creating a full pipeline from production to shipping.',
+    skills: ['Digital Sales Strategy', 'Workflow Design'],
+    icon: MessageCircle,
+  },
+  {
+    id: 'sq-14',
+    title: 'Cambridge 5K',
+    subtitle: 'Sub-28 Goal Achieved',
+    period: 'November 1, 2025',
+    description: 'Completed the Cambridge 5K in 27:59, achieving my goal of running under 28 minutes.',
+    skills: ['Goal Setting', 'Discipline'],
+    icon: Timer,
+  },
+  {
+    id: 'sq-15',
+    title: 'Boston Half Marathon',
+    subtitle: 'PR Attempt — 2:16:00',
+    period: 'November 2025',
+    description: 'Ran Boston Half Marathon again with proper training, finished in 2:16:00 (20-minute improvement). Enjoyed the experience much more.',
+    skills: ['Consistency', 'Endurance'],
+    icon: Medal,
+  },
+  {
+    id: 'sq-16',
+    title: '7-a-side Intramural Football',
+    subtitle: 'Fall 2025 Season — Quarter Finals',
+    period: 'Fall 2025',
+    description: 'Participated in intramurals, reached quarter finals.',
+    skills: ['Team Coordination', 'Leadership'],
+    icon: Trophy,
+  },
+  {
+    id: 'sq-17',
+    title: 'Cambridge Classic Winter 5K',
+    subtitle: 'Post-Marathon Fun Run',
+    period: 'December 9, 2025',
+    description: 'Ran the Cambridge Classic Winter 5K, finishing in 31:02. Fun, post-marathon run.',
+    skills: ['Fitness Maintenance', 'Enjoyment'],
+    icon: Snowflake,
+  },
+  {
+    id: 'sq-18',
+    title: 'Green Decor Internship',
+    subtitle: 'Team Lead for Interns',
+    period: 'December 2025',
+    description: 'Managed 3 high school interns for WhatsApp drops project, guiding marketing and client coordination while attending school.',
+    skills: ['Leadership', 'Mentorship'],
+    icon: UserCheck,
+    links: [
+      { label: 'Instagram', url: 'https://www.instagram.com/greendecorhandicrafts/' },
+      { label: 'Website', url: 'https://www.greendecor.co.in' },
+    ],
   },
 ];
 
@@ -103,13 +229,53 @@ const Sidequests = () => {
                         </div>
                         <div className="min-w-0 flex-1">
                           <h3 className="font-mono font-semibold text-foreground">{quest.title}</h3>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            {quest.period} • <span className="text-primary">{quest.category}</span>
-                          </p>
+                          {quest.subtitle && (
+                            <p className="text-xs text-primary mt-0.5">{quest.subtitle}</p>
+                          )}
+                          <p className="text-xs text-muted-foreground mt-1">{quest.period}</p>
                         </div>
                       </div>
                       
-                      <p className="text-sm text-muted-foreground ml-12">{quest.description}</p>
+                      <p className="text-sm text-muted-foreground ml-12 mb-3">{quest.description}</p>
+                      
+                      {/* Skills */}
+                      <div className="flex flex-wrap gap-2 ml-12 mb-3">
+                        {quest.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Links */}
+                      {quest.link && (
+                        <a
+                          href={quest.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs text-primary hover:text-pink-500 transition-colors ml-12 font-mono"
+                        >
+                          View Project →
+                        </a>
+                      )}
+                      {quest.links && (
+                        <div className="flex gap-4 ml-12">
+                          {quest.links.map((link) => (
+                            <a
+                              key={link.label}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs text-primary hover:text-pink-500 transition-colors font-mono"
+                            >
+                              {link.label} →
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
