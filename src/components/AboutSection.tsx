@@ -2,9 +2,9 @@ import { Code2, Coffee, Rocket } from 'lucide-react';
 
 const AboutSection = () => {
   const highlights = [
-    { icon: Code2, label: '5+ Years', desc: 'Experience' },
-    { icon: Coffee, label: '50+', desc: 'Projects' },
-    { icon: Rocket, label: '99%', desc: 'Uptime' },
+    { icon: Code2, label: 'Software', desc: 'Engineer' },
+    { icon: Coffee, label: '10+', desc: 'Projects' },
+    { icon: Rocket, label: 'Scalable', desc: 'Solutions' },
   ];
 
   return (
@@ -18,14 +18,15 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I'm a software engineer specializing in building exceptional digital experiences. 
-              Currently focused on creating accessible, human-centered products using modern 
-              web technologies.
+              I'm a software engineer focused on building clean, efficient, and human-centered 
+              digital experiences. My work revolves around creating intuitive, accessible products 
+              grounded in real user needs, while also automating processes and building tools 
+              that drive efficiency and innovation.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With a background in computer science and years of hands-on experience, 
-              I bring ideas to life through clean, efficient code. I believe in the 
-              power of simplicity and the beauty of well-crafted software.
+              With a strong foundation in computer science and years of hands-on experience, 
+              I enjoy turning complex problems into simple, scalable solutions through 
+              thoughtful design and well-crafted code.
             </p>
 
             {/* Highlights */}
@@ -54,14 +55,14 @@ const AboutSection = () => {
             <pre className="p-4 text-sm font-mono overflow-x-auto">
               <code className="text-muted-foreground">
 {`{
-  "name": "Alex Chen",
+  "name": "Ripan",
   "role": "Full Stack Developer",
-  "location": "San Francisco, CA",
+  "email": "kaur.ri@northeastern.edu",
   "interests": [
-    "Open Source",
-    "System Design",
-    "Developer Tools",
-    "Cloud Architecture"
+    "Human-Centered Design",
+    "Process Automation",
+    "Scalable Solutions",
+    "Developer Tools"
   ],
   "available": true
 }`}
