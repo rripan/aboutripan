@@ -80,12 +80,16 @@ export default {
           "50%": { opacity: "0.8" },
         },
         "float": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-10px)" },
+          "0%, 100%": { transform: "translateY(0) scale(1)" },
+          "50%": { transform: "translateY(-20px) scale(1.05)" },
         },
         "cursor-blink": {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0" },
+        },
+        "twinkle": {
+          "0%, 100%": { opacity: "0", transform: "scale(0.5)" },
+          "50%": { opacity: "1", transform: "scale(1)" },
         },
       },
       animation: {
@@ -94,8 +98,9 @@ export default {
         "fade-in": "fade-in 0.6s ease-out forwards",
         "fade-in-up": "fade-in-up 0.6s ease-out forwards",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
-        "float": "float 6s ease-in-out infinite",
+        "float": "float 8s ease-in-out infinite",
         "cursor-blink": "cursor-blink 1s step-end infinite",
+        "twinkle": "twinkle 3s ease-in-out infinite",
       },
     },
   },

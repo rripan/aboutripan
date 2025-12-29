@@ -178,10 +178,54 @@ const sidequests = [
   },
 ];
 
+const FloatingShape = ({ className, delay = 0 }: { className: string; delay?: number }) => (
+  <div 
+    className={`absolute rounded-full opacity-20 blur-xl animate-float ${className}`}
+    style={{ animationDelay: `${delay}s` }}
+  />
+);
+
 const Sidequests = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-6 py-12">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Fun animated background */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        {/* Gradient orbs */}
+        <FloatingShape className="w-96 h-96 bg-primary -top-20 -left-20" delay={0} />
+        <FloatingShape className="w-80 h-80 bg-pink-500 top-1/4 -right-20" delay={1} />
+        <FloatingShape className="w-64 h-64 bg-orange-400 top-1/2 left-1/4" delay={2} />
+        <FloatingShape className="w-72 h-72 bg-purple-500 bottom-1/4 right-1/4" delay={1.5} />
+        <FloatingShape className="w-56 h-56 bg-cyan-400 bottom-20 -left-10" delay={0.5} />
+        <FloatingShape className="w-48 h-48 bg-yellow-400 top-3/4 right-10" delay={2.5} />
+        
+        {/* Animated stars/sparkles */}
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-primary rounded-full animate-twinkle"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 2}s`,
+            }}
+          />
+        ))}
+        
+        {/* Grid overlay */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px',
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-6 py-12 relative z-10">
         {/* Back button */}
         <Link
           to="/"
@@ -222,7 +266,7 @@ const Sidequests = () => {
                     {/* Timeline dot with glow */}
                     <div className="absolute left-0 md:left-1/2 w-3 h-3 bg-gradient-to-r from-primary to-pink-500 rounded-full -translate-x-1 md:-translate-x-1.5 mt-2 shadow-[0_0_10px_rgba(59,130,246,0.5)]" />
                     
-                    <div className="ml-6 md:ml-0 bg-card border border-border rounded-lg p-5 card-hover group hover:border-primary/50 transition-all duration-300">
+                    <div className="ml-6 md:ml-0 bg-card/80 backdrop-blur-sm border border-border rounded-lg p-5 card-hover group hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
                       <div className="flex items-start gap-3 mb-3">
                         <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-pink-500/20 group-hover:from-primary/30 group-hover:to-pink-500/30 transition-all">
                           <IconComponent className="w-5 h-5 text-primary shrink-0" />
