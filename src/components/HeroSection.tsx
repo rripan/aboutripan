@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, FileText } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -36,10 +36,25 @@ const HeroSection = () => {
           </p>
         </div>
 
+        {/* Resume Button */}
+        <div
+          className="opacity-0 animate-fade-in mt-8"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <a
+            href="/resume.pdf"
+            download="Ripan_Resume.pdf"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono font-medium rounded-lg hover:bg-primary/90 transition-all duration-200 glow"
+          >
+            <FileText className="w-4 h-4" />
+            Download Resume
+          </a>
+        </div>
+
         {/* Social Links */}
         <div
-          className="opacity-0 animate-fade-in flex items-center justify-center gap-4 mt-8"
-          style={{ animationDelay: "0.5s" }}
+          className="opacity-0 animate-fade-in flex items-center justify-center gap-4 mt-6"
+          style={{ animationDelay: "0.6s" }}
         >
           <a
             href="https://github.com/rripan"
