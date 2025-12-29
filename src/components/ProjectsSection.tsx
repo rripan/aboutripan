@@ -1,32 +1,23 @@
-import { ExternalLink, Github, Folder } from 'lucide-react';
+import { Folder } from 'lucide-react';
 
 const projects = [
   {
-    title: 'DevFlow',
-    description: 'A developer productivity tool for managing workflows and automating repetitive tasks.',
-    tech: ['React', 'Node.js', 'PostgreSQL'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Personal Portfolio Website',
+    description: 'Developed a full-stack personal portfolio website using React for the frontend and Flask for the backend. Integrated Google Gemini API to enhance functionality improving interactivity and user engagement.',
+    tech: ['React', 'Flask', 'Google Gemini API'],
+    period: 'May 2025',
   },
   {
-    title: 'CloudSync',
-    description: 'Real-time file synchronization service with end-to-end encryption.',
-    tech: ['TypeScript', 'AWS', 'Redis'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: 'Ticket Resale Platform',
+    description: 'Initiated the development of a customer-to-customer (C2C) ticket marketplace, collaborating on backend systems using Django and designing the SQL database for secure data handling.',
+    tech: ['Django', 'SQL', 'Python'],
+    period: 'Sept 2024',
   },
   {
-    title: 'CodeMetrics',
-    description: 'Analytics dashboard for tracking code quality and team performance.',
-    tech: ['Next.js', 'GraphQL', 'D3.js'],
-    github: 'https://github.com',
-  },
-  {
-    title: 'APIForge',
-    description: 'API testing and documentation platform with collaborative features.',
-    tech: ['Vue', 'Express', 'MongoDB'],
-    github: 'https://github.com',
-    live: 'https://example.com',
+    title: '"Ready" Prototype - Paws Hackathon',
+    description: 'Developed a study app prototype within 24 hours to address test anxiety, exam preparation, and time management, integrating research on study habits and behavioral patterns among individuals aged 18 to 23.',
+    tech: ['Prototype', 'UX Research', 'Hackathon'],
+    period: 'March 2024',
   },
 ];
 
@@ -49,28 +40,7 @@ const ProjectsSection = () => {
               <div className="bg-card border border-border rounded-lg p-6 card-hover h-full flex flex-col">
                 <div className="flex items-start justify-between mb-4">
                   <Folder className="w-10 h-10 text-primary" />
-                  <div className="flex items-center gap-3">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <ExternalLink className="w-5 h-5" />
-                      </a>
-                    )}
-                  </div>
+                  <span className="text-xs font-mono text-muted-foreground">{project.period}</span>
                 </div>
 
                 <h3 className="font-mono font-semibold text-lg text-foreground mb-2">
