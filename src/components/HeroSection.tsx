@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import InteractiveBackground from "./InteractiveBackground";
+import TypewriterText from "./TypewriterText";
 
 const HeroSection = () => {
   return (
@@ -27,9 +28,8 @@ const HeroSection = () => {
         </h1>
 
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-          <p className="mt-4 text-xl md:text-2xl font-mono text-gradient glow-text">
-            Full Stack Developer
-            <span className="inline-block w-0.5 h-6 bg-primary ml-1 animate-cursor-blink" />
+          <p className="mt-4 text-xl md:text-2xl font-mono">
+            <TypewriterText />
           </p>
         </div>
 
