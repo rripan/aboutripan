@@ -1,10 +1,14 @@
 import { Github, Linkedin, Mail, ArrowDown, FileText } from "lucide-react";
+import InteractiveBackground from "./InteractiveBackground";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Interactive Particle Background */}
+      <InteractiveBackground />
+      
       {/* Grid Pattern Background */}
-      <div className="absolute inset-0 grid-pattern opacity-30" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
 
       {/* Gradient Orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow" />
