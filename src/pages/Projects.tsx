@@ -4,6 +4,24 @@ import { ArrowLeft, Folder, Calendar, Code2, Lightbulb } from 'lucide-react';
 
 const projects = [
   {
+    id: 'powerpoint-automation',
+    title: 'Automated PowerPoint Reporting System',
+    period: 'Bain Capital IT',
+    description: 'End-to-end automation script for generating dynamic, data-driven PowerPoint reports with minimal manual intervention.',
+    overview: 'Designed and built an end-to-end automation script to generate dynamic, data-driven PowerPoint reports for Bain Capital IT department. The tool consolidates data from multiple sources—including ServiceNow APIs, Excel/CSV files, images, and PDFs—and programmatically updates presentation slides using Microsoft Office COM automation.',
+    features: [
+      'Intelligent slide selection based on business logic (e.g., weekday-specific decks)',
+      'Automatic placeholder replacement with latest charts, tables, and KPIs',
+      'PDF parsing for SLA metrics extraction',
+      'Interactive hyperlink injection into tables for seamless navigation',
+      'Windows Forms GUI for non-technical user customization',
+      'Robust error handling, backups, and modular function architecture',
+    ],
+    technologies: ['PowerShell', 'Microsoft Office COM', 'API Integration', 'Windows Forms', 'Data Parsing', 'Process Automation'],
+    challenges: 'Integrating multiple data sources (ServiceNow APIs, Excel, PDFs) into a cohesive pipeline while ensuring reliability through error handling and maintaining modularity for future enhancements.',
+    outcome: 'Significantly reduced manual reporting time, improved accuracy, and demonstrated how automation and tooling can drive efficiency and scalability in operational workflows.',
+  },
+  {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
     period: 'May 2025',
