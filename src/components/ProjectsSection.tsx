@@ -3,6 +3,13 @@ import { Folder, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+    id: 'powerpoint-automation',
+    title: 'Automated PowerPoint Reporting System',
+    summary: 'End-to-end automation script for data-driven PowerPoint reports using PowerShell and Office COM.',
+    tech: ['PowerShell', 'Office COM', 'API Integration'],
+    period: 'Bain Capital IT',
+  },
+  {
     id: 'portfolio-website',
     title: 'Personal Portfolio Website',
     summary: 'Full-stack portfolio with AI-powered chatbot using React, Flask, and Google Gemini API.',
