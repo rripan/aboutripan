@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Sparkles, Trophy, Plane, Goal, Lightbulb, Instagram, Users, Timer, Shield, BookOpen, Mic, Globe, MessageCircle, Medal, Snowflake, UserCheck } from 'lucide-react';
+import { ArrowLeft, Sparkles, Trophy, Plane, Goal, Lightbulb, Instagram, Users, Timer, Shield, BookOpen, Mic, Globe, MessageCircle, Medal, Snowflake, UserCheck, ArrowUp } from 'lucide-react';
 
 const sidequests = [
   {
@@ -259,8 +259,7 @@ const Sidequests = () => {
               return (
                 <div
                   key={quest.id}
-                  className={`opacity-0 relative ${idx % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'}`}
-                  style={{ animationDelay: `${idx * 0.15}s` }}
+                  className="relative"
                 >
                   <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-12' : 'md:ml-auto md:pl-12'}`}>
                     {/* Timeline dot with glow */}
@@ -328,11 +327,15 @@ const Sidequests = () => {
           </div>
         </div>
 
-        {/* Bottom decoration */}
+        {/* Back to top */}
         <div className="mt-16 text-center">
-          <p className="font-mono text-sm text-muted-foreground">
-            <span className="text-primary">//</span> more quests loading...
-          </p>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group cursor-pointer"
+          >
+            <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+            <span className="font-mono text-sm">you scrolled all that? impressive dedication 👏</span>
+          </button>
         </div>
       </div>
     </div>
