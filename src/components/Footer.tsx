@@ -10,7 +10,7 @@ const Footer = () => {
             <span className="font-mono text-sm">Built with React & Tailwind</span>
           </div>
           <p className="font-mono text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Alex Chen
+            © {new Date().getFullYear()} Ripan
           </p>
         </div>
       </div>
