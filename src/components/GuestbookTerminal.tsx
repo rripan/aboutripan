@@ -90,7 +90,7 @@ const GuestbookTerminal = forwardRef<HTMLDivElement, GuestbookTerminalProps>(
             </div>
 
             {/* Scroll hint */}
-            {entries.length > 3 && (
+            {entries.length > 0 && (
               <div className="mt-6 text-center text-xs text-muted-foreground/60 animate-pulse">
                 ↑ scroll up to see more entries
               </div>
