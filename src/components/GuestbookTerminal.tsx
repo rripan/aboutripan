@@ -88,13 +88,6 @@ const GuestbookTerminal = forwardRef<HTMLDivElement, GuestbookTerminalProps>(
               <span className="text-muted-foreground">$</span>{' '}
               <span className="animate-pulse">▊</span>
             </div>
-
-            {/* Scroll hint */}
-            {entries.length > 0 && (
-              <div className="mt-6 text-center text-xs text-muted-foreground/60 animate-pulse">
-                ↑ scroll up to see more entries
-              </div>
-            )}
           </div>
         </div>
       </div>
