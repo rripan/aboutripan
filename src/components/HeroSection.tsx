@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Interactive Particle Background */}
       <InteractiveBackground />
-      
+
       {/* Grid Pattern Background */}
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
@@ -35,8 +35,7 @@ const HeroSection = () => {
 
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto text-sm md:text-base leading-relaxed">
-            Student developer building full-stack web applications. Passionate about creating clean, performant
-            digital experiences.
+            Building elegant solutions with clean code. Passionate about creating clean, performant digital experiences.
           </p>
         </div>
 
@@ -70,10 +69,7 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div
-          className="opacity-0 animate-fade-in mt-10"
-          style={{ animationDelay: "0.7s" }}
-        >
+        <div className="opacity-0 animate-fade-in mt-10" style={{ animationDelay: "0.7s" }}>
           <a
             href="#about"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
