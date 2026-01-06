@@ -52,7 +52,7 @@ const AboutSection = () => {
                 {`{
   "name": "Ripan",
   "role": "Student Developer",
-  "Concentration": "Artificial Intelligence",
+  "concentration": "Artificial Intelligence",
   "location": "Boston, MA",
   "email": "kaur.ri@northeastern.edu",
   "interests": [
