@@ -181,6 +181,13 @@ const Guestbook = () => {
               <Send className="w-4 h-4" />
               {isSubmitting ? 'Sending...' : 'Sign Guestbook (Enter)'}
             </button>
+
+            {/* Scroll hint */}
+            {entries.length > 0 && (
+              <div className="text-center text-xs text-muted-foreground/60 animate-pulse">
+                ↑ scroll up to see previous entries
+              </div>
+            )}
           </div>
         </div>
 
