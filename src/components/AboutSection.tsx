@@ -2,9 +2,9 @@ import { Code2, Coffee, Rocket } from 'lucide-react';
 
 const AboutSection = () => {
   const highlights = [
-    { icon: Code2, label: 'Software', desc: 'Engineer' },
+    { icon: Code2, label: 'Student', desc: 'Developer' },
     { icon: Coffee, label: '10+', desc: 'Projects' },
-    { icon: Rocket, label: 'Scalable', desc: 'Solutions' },
+    { icon: Rocket, label: 'Full-Stack', desc: 'Focus' },
   ];
 
   return (
@@ -18,13 +18,13 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I'm a software engineer focused on building clean, efficient, and human-centered 
-              digital experiences. My work revolves around creating intuitive, accessible products 
-              grounded in real user needs, while also automating processes and building tools 
+              I'm a computer science student passionate about building clean, efficient, and human-centered 
+              digital experiences. My work focuses on creating intuitive, accessible products 
+              grounded in real user needs, while also exploring process automation and tools 
               that drive efficiency and innovation.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With a strong foundation in computer science and years of hands-on experience, 
+              With a growing foundation in computer science and hands-on project experience, 
               I enjoy turning complex problems into simple, scalable solutions through 
               thoughtful design and well-crafted code.
             </p>
@@ -56,14 +56,14 @@ const AboutSection = () => {
               <code className="text-muted-foreground">
 {`{
   "name": "Ripan",
-  "role": "Full Stack Developer",
+  "role": "Student Developer",
+  "focus": "Full-Stack Web Applications",
   "location": "Boston, MA",
   "email": "kaur.ri@northeastern.edu",
   "interests": [
     "Human-Centered Design",
     "Process Automation",
-    "Scalable Solutions",
-    "Developer Tools"
+    "Scalable Solutions"
   ],
   "available": true
 }`}

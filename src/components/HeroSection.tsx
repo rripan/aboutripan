@@ -35,8 +35,8 @@ const HeroSection = () => {
 
         <div className="opacity-0 animate-fade-in" style={{ animationDelay: "0.4s" }}>
           <p className="mt-6 text-muted-foreground max-w-lg mx-auto text-sm md:text-base leading-relaxed">
-            Building elegant solutions with clean code. Passionate about creating performant web applications and
-            developer tools.
+            Student developer building full-stack web applications. Passionate about creating clean, performant
+            digital experiences.
           </p>
         </div>
 
