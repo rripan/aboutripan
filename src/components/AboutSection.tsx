@@ -1,10 +1,10 @@
-import { Code2, Coffee, Rocket } from 'lucide-react';
+import { Code2, Coffee, Rocket } from "lucide-react";
 
 const AboutSection = () => {
   const highlights = [
-    { icon: Code2, label: 'Student', desc: 'Developer' },
-    { icon: Coffee, label: '10+', desc: 'Projects' },
-    { icon: Rocket, label: 'Full-Stack', desc: 'Focus' },
+    { icon: Code2, label: "Student", desc: "Developer" },
+    { icon: Coffee, label: "10+", desc: "Projects" },
+    { icon: Rocket, label: "Full-Stack", desc: "Focus" },
   ];
 
   return (
@@ -18,24 +18,19 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I'm a computer science student passionate about building clean, efficient, and human-centered 
-              digital experiences. My work focuses on creating intuitive, accessible products 
-              grounded in real user needs, while also exploring process automation and tools 
-              that drive efficiency and innovation.
+              I'm a computer science student passionate about building clean, efficient, and human-centered digital
+              experiences. My work focuses on creating intuitive, accessible products grounded in real user needs, while
+              also exploring process automation and tools that drive efficiency and innovation.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              With a growing foundation in computer science and hands-on project experience, 
-              I enjoy turning complex problems into simple, scalable solutions through 
-              thoughtful design and well-crafted code.
+              With a growing foundation in computer science and hands-on project experience, I enjoy turning complex
+              problems into simple, scalable solutions through thoughtful design and well-crafted code.
             </p>
 
             {/* Highlights */}
             <div className="grid grid-cols-3 gap-4 pt-6">
               {highlights.map(({ icon: Icon, label, desc }) => (
-                <div
-                  key={label}
-                  className="p-4 rounded-lg bg-card border border-border card-hover text-center"
-                >
+                <div key={label} className="p-4 rounded-lg bg-card border border-border card-hover text-center">
                   <Icon className="w-5 h-5 text-primary mx-auto mb-2" />
                   <p className="font-mono font-semibold text-foreground">{label}</p>
                   <p className="text-xs text-muted-foreground">{desc}</p>
@@ -54,10 +49,10 @@ const AboutSection = () => {
             </div>
             <pre className="p-4 text-sm font-mono overflow-x-auto">
               <code className="text-muted-foreground">
-{`{
+                {`{
   "name": "Ripan",
   "role": "Student Developer",
-  "focus": "Full-Stack Web Applications",
+  "Concentration": "Artificial Intelligence",
   "location": "Boston, MA",
   "email": "kaur.ri@northeastern.edu",
   "interests": [
