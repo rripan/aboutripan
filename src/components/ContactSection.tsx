@@ -37,10 +37,22 @@ const ContactSection = () => {
             </a>
             <Link
               to="/guestbook"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-mono font-medium rounded-lg border border-border hover:border-primary/50 transition-all duration-200"
+              className="group relative inline-flex items-center gap-2 px-6 py-3 font-mono font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)]"
             >
-              <BookOpen className="w-4 h-4" />
-              Sign Guestbook
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-[shimmer_2s_ease-in-out_infinite]" />
+              
+              {/* Glow pulse effect */}
+              <div className="absolute inset-0 bg-primary/20 animate-pulse" />
+              
+              {/* Border glow */}
+              <div className="absolute inset-0 rounded-lg border-2 border-primary/50 group-hover:border-primary transition-colors duration-300" />
+              
+              {/* Content */}
+              <span className="relative z-10 flex items-center gap-2 text-primary-foreground">
+                <BookOpen className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="group-hover:tracking-wider transition-all duration-300">Sign Guestbook</span>
+              </span>
             </Link>
           </div>
         </div>
