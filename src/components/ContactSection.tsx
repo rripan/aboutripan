@@ -1,4 +1,5 @@
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactSection = () => {
   return (
@@ -26,13 +27,22 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <a
-            href="mailto:kaur.ri@northeastern.edu"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono font-medium rounded-lg hover:bg-primary/90 transition-all duration-200 glow"
-          >
-            <Send className="w-4 h-4" />
-            Get in Touch
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="mailto:kaur.ri@northeastern.edu"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono font-medium rounded-lg hover:bg-primary/90 transition-all duration-200 glow"
+            >
+              <Send className="w-4 h-4" />
+              Get in Touch
+            </a>
+            <Link
+              to="/guestbook"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-mono font-medium rounded-lg border border-border hover:border-primary/50 transition-all duration-200"
+            >
+              <BookOpen className="w-4 h-4" />
+              Sign Guestbook
+            </Link>
+          </div>
         </div>
       </div>
     </section>
