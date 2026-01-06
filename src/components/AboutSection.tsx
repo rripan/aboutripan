@@ -4,7 +4,7 @@ const AboutSection = () => {
   const highlights = [
     { icon: Code2, label: "Student", desc: "Developer" },
     { icon: Coffee, label: "10+", desc: "Projects" },
-    { icon: Rocket, label: "Creating", desc: "Solutions" },
+    { icon: Rocket, label: "Innovative", desc: "Solutions" },
   ];
 
   return (
