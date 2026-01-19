@@ -36,7 +36,7 @@ const CursorTrail = () => {
 
     const draw = () => {
       const now = Date.now();
-      const fadeTime = 3000; // 3 seconds
+      const fadeTime = 1000; // 1 second
 
       // Clear canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
