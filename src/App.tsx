@@ -9,12 +9,14 @@ import Projects from "./pages/Projects";
 import Sidequests from "./pages/Sidequests";
 import Guestbook from "./pages/Guestbook";
 import NotFound from "./pages/NotFound";
+import CursorTrail from "./components/CursorTrail";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <CursorTrail />
       <Toaster />
       <Sonner />
       <BrowserRouter>
