@@ -55,18 +55,23 @@ const CursorTrail = () => {
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
 
-      for (let i = 1; i < pointsRef.current.length; i++) {
+      for (let i = 0; i < pointsRef.current.length; i++) {
         const point = pointsRef.current[i];
-        const prevPoint = pointsRef.current[i - 1];
         const age = now - point.timestamp;
         const opacity = 1 - age / fadeTime;
+        const size = 2 + (1 - age / fadeTime) * 3; // Larger when newer
 
+        // Draw dot
         ctx.beginPath();
-        ctx.moveTo(prevPoint.x, prevPoint.y);
-        ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.9})`;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+        ctx.arc(point.x, point.y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(96, 165, 250, ${opacity * 0.8})`; // Blue color matching background
+        ctx.fill();
+
+        // Add glow effect
+        ctx.beginPath();
+        ctx.arc(point.x, point.y, size + 4, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(96, 165, 250, ${opacity * 0.2})`;
+        ctx.fill();
       }
 
       animationFrameRef.current = requestAnimationFrame(draw);
