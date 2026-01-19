@@ -61,22 +61,11 @@ const CursorTrail = () => {
         const age = now - point.timestamp;
         const opacity = 1 - age / fadeTime;
 
-        // Create gradient effect based on age
-        const hue = 280 + (age / fadeTime) * 40; // Purple to pink shift
-        
         ctx.beginPath();
         ctx.moveTo(prevPoint.x, prevPoint.y);
         ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle = `hsla(${hue}, 70%, 60%, ${opacity * 0.8})`;
-        ctx.lineWidth = 3 + (1 - age / fadeTime) * 2; // Thicker when newer
-        ctx.stroke();
-
-        // Add glow effect
-        ctx.beginPath();
-        ctx.moveTo(prevPoint.x, prevPoint.y);
-        ctx.lineTo(point.x, point.y);
-        ctx.strokeStyle = `hsla(${hue}, 80%, 70%, ${opacity * 0.3})`;
-        ctx.lineWidth = 8 + (1 - age / fadeTime) * 4;
+        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.9})`;
+        ctx.lineWidth = 1.5;
         ctx.stroke();
       }
 
