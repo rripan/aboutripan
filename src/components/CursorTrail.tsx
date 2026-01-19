@@ -61,16 +61,16 @@ const CursorTrail = () => {
         const opacity = 1 - age / fadeTime;
         const size = 2 + (1 - age / fadeTime) * 3; // Larger when newer
 
-        // Draw dot
+        // Draw dot - using primary teal color (175, 80%, 50%)
         ctx.beginPath();
         ctx.arc(point.x, point.y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(96, 165, 250, ${opacity * 0.8})`; // Blue color matching background
+        ctx.fillStyle = `hsla(175, 80%, 50%, ${opacity * 0.8})`;
         ctx.fill();
 
         // Add glow effect
         ctx.beginPath();
         ctx.arc(point.x, point.y, size + 4, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(96, 165, 250, ${opacity * 0.2})`;
+        ctx.fillStyle = `hsla(175, 80%, 50%, ${opacity * 0.2})`;
         ctx.fill();
       }
 
